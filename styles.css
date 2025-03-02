@@ -1,0 +1,221 @@
+/* Basic reset */
+* {
+    margin: 0;
+
+}
+
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.7); /* White overlay with 70% opacity */
+    z-index: -1; /* Place behind the content */
+}
+
+/* Element selector for body */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('images/background.jpg'); /* Your image path */
+    background-size: cover; /* Cover the entire viewport */
+    background-position: center; /* Center the image */
+    background-attachment: fixed; /* Keep the background fixed while scrolling */
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+/* Class selector for navigation menu */
+.nav-menu {
+    background-color: #4CAF50;
+    padding: 20px;
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+}
+
+.nav-menu li {
+    margin: 0 20px;
+}
+
+/* Pseudo-class selector for link hover */
+.nav-menu a:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+.nav-menu a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Main content area */
+.content {
+    padding: 20px;
+    text-align: left;
+}
+
+.quote {
+    font-style: italic;
+    background-color: #f4f4f4;
+    padding: 15px;
+    border-left: 5px solid #4CAF50;
+    margin: 20px 0;
+}
+
+/* Headings */
+h1 {
+    color: #333;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+h2 {
+    color: #4CAF50;
+    margin: 20px 0;
+}
+
+/* Sections */
+.section {
+    padding: 10px;
+    margin-bottom: 10px;
+    position: relative;
+    background-color: rgba(255, 255, 255, 0.8); 
+}
+
+/* Images */
+.main-image {
+    object-fit: cover;
+    width: 100vh;
+    position: relative;
+    left: 15%;
+    padding-top: 10px;
+}
+
+/* Tables */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #4CAF50;
+    color: white;
+}
+
+/* Lists */
+
+ul ul {
+    margin-left: 40px;
+}
+
+.subject {
+   width: 300px;
+   height: 200px;
+   margin: 0 auto;
+   background-color: deeppink;
+}
+ 
+.content {
+    width: 75%;
+    max-width: 800px;
+    margin: 0 auto;
+}
+ 
+p,h1 {
+    font-family: Helvetica, sans-serif;
+}
+ 
+h1 {
+    padding: 20px 0;
+    font-size: 2.5rem;
+}
+ 
+p {
+    line-height: 1.5;
+}
+
+.left {
+    left: 0;
+}
+
+.right {
+    left: 50%;
+}
+ /* For the tutorial I use slightly different colors, but you get the idea. */
+
+.events::after {
+    content: '';
+    position: absolute;
+    width: 4px;
+    background-color: black;
+    top: 3em;
+    bottom: 0;
+    left: 50%;
+    margin-left: -1px;
+}
+
+.marker {
+    position: absolute;
+    border-radius: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+    fill: magenta;
+}
+
+.event_one .marker { fill: yellow; top: 5em; }
+.event_two .marker { fill: red; top: 15em;}
+.event_three .marker { fill: green; top: 25em; }
+.event_four .marker { fill: orange; top: 35em; }
+
+
+
+.content time {
+  font-family: concourse_4, Helvetica, sans-serif;
+}
+.events { 
+    margin: 0.5em;
+    position: relative;
+}
+
+/* Footer */
+footer {
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 50px;
+}
+
+
+  /* .animation {
+    view-timeline-name: --subjectReveal;
+    animation-timeline: --subjectReveal;
+  
+    animation-name: appear;
+    animation-fill-mode: both;
+    animation-duration: 1ms; 
+  }
+  
+  @keyframes appear {
+    from {
+      opacity: 0;
+      transform: scaleX(0);
+    }
+  
+    to {
+      opacity: 1;
+      transform: scaleX(1);
+    }
+  }
