@@ -1,9 +1,27 @@
+/* Media Query */
+@media (max-width: 600px) {
+    .nav-menu {
+        flex-direction: column;
+    }
+    
+    .content {
+        width: 95%;
+    }
+    
+    .main-image {
+        width: 100%;
+        left: 0;
+    }
+}
+
 /* Margin Reset at every load */
 * {
     margin: 0;
 }
 
-/* Background for the text placed behind content  */
+/* BACKGROUND */
+
+/* Background text placed behind content  */
 body::before {
     content: '';
     position: absolute;
@@ -16,7 +34,7 @@ body::before {
     z-index: -1;
 }
 
-/* Background image & font selection */
+/* Background image & font */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -29,7 +47,7 @@ body {
     position: relative;
 }
 
-/* Nav menu */
+/* NAV */
 .nav-menu {
     background-color: #4CAF50;
     padding: 20px;
@@ -62,7 +80,7 @@ body {
     margin: 0 auto;
 }
 
-/* Quote Element */
+/* QUOTES */
 .quote {
     font-style: italic;
     background-color: #f4f4f4;
@@ -90,7 +108,8 @@ h2 {
     margin: 20px 0;
 }
 
-/* Sections */
+/* SECTIONS */
+
 .section {
     padding: 10px;
     margin-bottom: 10px;
@@ -98,7 +117,8 @@ h2 {
     background-color: rgba(255, 255, 255, 0.8); 
 }
 
-/* Image at index.html */
+/* PLACEHOLDER IMAGE */
+
 .main-image {
     object-fit: cover;
     width: 100vh;
@@ -128,6 +148,8 @@ th {
 ul ul {
     margin-left: 40px;
 }
+
+/* TIMELINE */
 
 /* Timeline container */
 .timeline {
@@ -252,7 +274,8 @@ ul ul {
   }
 
 
-/* Awards */
+/* AWARDS */
+
 .awards-container {
     display: flex;
     justify-content: space-around;
@@ -283,11 +306,95 @@ ul ul {
     font-weight: bold;
 }
 
-/* Footer */
+/* FOOTER */
 footer {
     background-color: #4CAF50;
     color: white;
     text-align: center;
     padding: 20px;
     margin-top: 50px;
+}
+
+/* QUIZ */
+
+/* Quiz container */
+.quiz-container {
+    background-color: white;
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+}
+
+/* Quiz question styling */
+.quiz-question {
+    margin-bottom: 15px;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border-left: 3px solid #4CAF50;
+}
+
+/* Quiz options styling */
+.quiz-options {
+    margin-top: 10px;
+}
+
+/* Option label styling */
+.option-label {
+    display: block;
+    padding: 5px;
+    margin-bottom: 5px;
+    background-color: #f1f1f1;
+}
+
+/* Hover effect on options */
+.option-label:hover {
+    background-color: #e9e9e9;
+}
+
+/* Quiz button styling */
+.quiz-btn {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    margin-top: 15px;
+    cursor: pointer;
+}
+
+/* Button hover effect */
+.quiz-btn:hover {
+    background-color: #45a049;
+}
+
+/* Results container (hidden initially) */
+.results-container {
+    display: none;
+    margin-top: 15px;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+}
+
+/* Correct answer styling */
+.correct {
+    background-color: #dff0d8;
+    border-left: 3px solid #4CAF50;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+/* Incorrect answer styling */
+.incorrect {
+    background-color: #f2dede;
+    border-left: 3px solid #d9534f;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+/* Fill in the blank input styling */
+.fill-blank-input {
+    width: 100%;
+    padding: 5px;
+    border: 1px solid #ddd;
+    margin-top: 5px;
 }
