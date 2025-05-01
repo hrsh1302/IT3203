@@ -1,0 +1,797 @@
+/* Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* BACKGROUND */
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.7);
+    z-index: -1;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('/app/images/background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    position: relative;
+    line-height: 1.6;
+}
+
+/* Typography */
+h1 {
+    font-family: Helvetica, sans-serif;
+    color: #333;
+    text-align: center;
+    margin-bottom: 30px;
+    padding: 20px 0;
+    font-size: 2.5rem;
+}
+
+h2 {
+    color: #4CAF50;
+    margin: 20px 0;
+    font-size: 1.8rem;
+}
+
+h3 {
+    color: #333;
+    margin: 15px 0;
+    font-size: 1.4rem;
+}
+
+p {
+    line-height: 1.5;
+    font-family: Helvetica, sans-serif;
+    margin-bottom: 15px;
+}
+
+/* NAVIGATION */
+.main-nav {
+    background-color: #4CAF50;
+    width: 100%;
+    position: relative;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+    padding: 15px 0;
+}
+
+.nav-menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.nav-menu li {
+    margin: 0 15px;
+}
+
+.nav-menu a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    display: block;
+    padding: 20px 0;
+    transition: all 0.3s ease;
+}
+
+.nav-menu a:hover {
+    color: #e0e0e0;
+    text-decoration: underline;
+}
+
+/* Hide checkbox and label by default */
+.nav-toggle {
+    display: none;
+}
+
+.nav-toggle-label {
+    display: none;
+}
+
+/* Content area */
+.content {
+    padding: 20px;
+    text-align: left;
+    width: 80%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* SECTIONS */
+.section {
+    padding: 20px;
+    margin-bottom: 20px;
+    position: relative;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* QUOTES */
+.quote {
+    font-style: italic;
+    background-color: #f4f4f4;
+    padding: 15px;
+    border-left: 5px solid #4CAF50;
+    margin: 20px 0;
+    border-radius: 0 5px 5px 0;
+}
+
+/* MAIN IMAGE */
+.main-image {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 20px auto;
+    border-radius: 5px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+}
+
+/* TABLES */
+.table-responsive {
+    width: 100%;
+    margin-bottom: 1.5rem;
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+}
+
+th {
+    background-color: #4CAF50;
+    color: white;
+    font-weight: bold;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+/* TIMELINE */
+.timeline {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 0;
+}
+
+.events {
+    position: relative;
+}
+
+.events::after {
+    content: '';
+    position: absolute;
+    width: 6px;
+    background-color: #4CAF50;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -3px;
+}
+
+.event {
+    position: relative;
+    width: 50%;
+    margin-bottom: 70px;
+}
+
+.event .content {
+    padding: 20px;
+    background-color: white;
+    position: relative;
+    border-radius: 6px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: auto;
+    box-sizing: border-box;
+}
+
+.event .content time {
+    display: block;
+    font-weight: bold;
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    color: #4CAF50;
+}
+
+.event_one .marker { background-color: #ffd700; }
+.event_two .marker { background-color: #ff5252; }
+.event_three .marker { background-color: #544caf; }
+.event_four .marker { background-color: #ff9800; }
+
+.left {
+    left: 0;
+}
+
+.right {
+    left: 50%;
+}
+
+.left .content {
+    margin-right: 50px;
+}
+
+.right .content {
+    margin-left: 50px;
+}
+
+.marker {
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    top: 15px;
+    z-index: 1;
+}
+
+.left .marker {
+    right: -12.5px;
+}
+
+.right .marker {
+    left: -12.5px;
+}
+
+/* TOOLTIP */
+.tooltip {
+    text-decoration: underline;
+    text-decoration-style: dotted;
+    text-decoration-color: #4CAF50;
+    position: relative;
+    cursor: help;
+}
+  
+.tooltip .tooltip-text {
+    display: none;
+    background-color: #333;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 4px;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 200px;
+    z-index: 1;
+}
+  
+.tooltip:hover .tooltip-text {
+    display: block;
+}
+
+/* AWARDS */
+.awards-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: 30px 0;
+    gap: 20px;
+}
+
+.award-item {
+    text-align: center;
+    width: 200px;
+    margin-bottom: 20px;
+}
+
+.award-item img {
+    width: 100%;
+    height: auto;
+    border: 2px solid #4CAF50;
+    border-radius: 5px;
+    transition: transform 0.3s ease;
+}
+
+.award-item img:hover {
+    transform: scale(1.05);
+}
+
+.award-item p {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+/* QUIZ */
+.quiz-container {
+    background-color: white;
+    padding: 20px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.quiz-question {
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: #f9f9f9;
+    border-left: 3px solid #4CAF50;
+    border-radius: 0 5px 5px 0;
+}
+
+.quiz-options {
+    margin-top: 10px;
+}
+
+.option-label {
+    display: block;
+    padding: 10px;
+    margin-bottom: 8px;
+    background-color: #f1f1f1;
+    border-radius: 4px;
+    transition: background-color 0.2s;
+}
+
+.option-label:hover {
+    background-color: #e9e9e9;
+}
+
+.quiz-btn {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 15px;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+}
+
+.quiz-btn:hover {
+    background-color: #45a049;
+}
+
+.results-container {
+    display: none;
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+.correct {
+    background-color: #dff0d8;
+    border-left: 3px solid #4CAF50;
+    padding: 12px;
+    margin-bottom: 12px;
+    border-radius: 0 5px 5px 0;
+}
+
+.incorrect {
+    background-color: #f2dede;
+    border-left: 3px solid #d9534f;
+    padding: 12px;
+    margin-bottom: 12px;
+    border-radius: 0 5px 5px 0;
+}
+
+.fill-blank-input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    margin-top: 8px;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+/* REFERENCES */
+.reference-card {
+    background-color: #f9f9f9;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-left: 3px solid #4CAF50;
+    border-radius: 0 5px 5px 0;
+}
+
+.reference-card a {
+    color: #4CAF50;
+    text-decoration: none;
+}
+
+.reference-card a:hover {
+    text-decoration: underline;
+}
+
+/* FOOTER */
+footer {
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 50px;
+}
+
+/* =================== */
+/* RESPONSIVE DESIGN   */
+/* =================== */
+
+/* Large Desktops and Laptops (1200px and up) */
+@media screen and (min-width: 1200px) {
+    .content {
+        width: 80%;
+        max-width: 1200px;
+    }
+    
+    h1 {
+        font-size: 2.8rem;
+    }
+    
+    h2 {
+        font-size: 2rem;
+    }
+    
+    .awards-container {
+        justify-content: space-around;
+    }
+}
+
+/* Medium devices (tablets, between 768px and 1199px) */
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+    .content {
+        width: 90%;
+    }
+    
+    h1 {
+        font-size: 2.2rem;
+    }
+    
+    .nav-menu li {
+        margin: 0 10px;
+    }
+    
+    .timeline .events::after {
+        left: 40px;
+    }
+    
+    .event {
+        width: 100%;
+        margin-left: 60px;
+    }
+    
+    .event.left, .event.right {
+        left: 0;
+    }
+    
+    .left .content, .right .content {
+        margin-left: 50px;
+        margin-right: 0;
+    }
+    
+    .left .marker, .right .marker {
+        left: -60px;
+        right: auto;
+    }
+    
+    .awards-container {
+        justify-content: space-around;
+    }
+    
+    .award-item {
+        width: 180px;
+    }
+    
+    table {
+        font-size: 0.9rem;
+    }
+}
+
+/* Small devices (mobile phones, less than 768px) */
+@media screen and (max-width: 767px) {
+    .content {
+        width: 95%;
+        padding: 10px;
+    }
+    
+    h1 {
+        font-size: 1.8rem;
+        padding: 15px 0;
+    }
+    
+    h2 {
+        font-size: 1.5rem;
+    }
+    
+    /* Navigation Menu - Mobile Hamburger */
+    .nav-container {
+        flex-wrap: wrap;
+    }
+    
+    /* Hamburger icon styling */
+    .nav-toggle-label {
+        display: block;
+        cursor: pointer;
+        padding: 20px 0;
+        position: relative;
+        z-index: 2;
+    }
+    
+    /* Creating the hamburger icon with spans */
+    .nav-toggle-label span,
+    .nav-toggle-label span::before,
+    .nav-toggle-label span::after {
+        display: block;
+        background: white;
+        height: 2px;
+        width: 24px;
+        position: relative;
+        transition: all 0.3s ease;
+    }
+    
+    .nav-toggle-label span::before,
+    .nav-toggle-label span::after {
+        content: '';
+        position: absolute;
+    }
+    
+    .nav-toggle-label span::before {
+        bottom: 8px;
+    }
+    
+    .nav-toggle-label span::after {
+        top: 8px;
+    }
+    
+    /* Position menu off screen by default */
+    .nav-menu {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: #4CAF50;
+        height: 0;
+        overflow: hidden;
+        flex-direction: column;
+        align-items: center;
+        transition: height 0.3s ease;
+        z-index: 1;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+    
+    .nav-menu li {
+        width: 100%;
+        text-align: center;
+        margin: 0;
+    }
+    
+    .nav-menu a {
+        padding: 15px 0;
+        border-bottom: 1px solid rgba(255,255,255,0.2);
+    }
+    
+    /* Show the menu when checkbox is checked */
+    .nav-toggle:checked ~ .nav-menu {
+        height: auto;
+        padding-bottom: 10px;
+    }
+    
+    /* Animate hamburger to X when open */
+    .nav-toggle:checked ~ .nav-toggle-label span {
+        background: transparent;
+    }
+    
+    .nav-toggle:checked ~ .nav-toggle-label span::before {
+        transform: rotate(45deg);
+        bottom: 0;
+    }
+    
+    .nav-toggle:checked ~ .nav-toggle-label span::after {
+        transform: rotate(-45deg);
+        top: 0;
+    }
+    
+    /* Main Image */
+    .main-image {
+        width: 100%;
+        left: 0;
+    }
+    
+    /* Timeline */
+    .timeline .events::after {
+        left: 20px;
+    }
+    
+    .event {
+        width: 100%;
+        margin-left: 45px;
+        margin-bottom: 40px;
+    }
+    
+    .event.left, .event.right {
+        left: 0;
+    }
+    
+    .left .content, .right .content {
+        margin-left: 0;
+        margin-right: 0;
+    }
+    
+    /* Fix for timeline markers - position ALL markers the same way */
+    .left .marker, .right .marker {
+        left: -45px;
+        right: auto;
+    }
+    
+    /* Define the marker size and centering */
+    .marker {
+        width: 20px;
+        height: 20px;
+        /* Position directly on the timeline */
+        margin-left: 10px;
+    }
+    
+    /* Award Items */
+    .awards-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .award-item {
+        width: 80%;
+        max-width: 250px;
+    }
+    
+    /* Tables */
+    .table-responsive {
+        display: block;
+        width: 100%;
+        overflow-x: auto;
+    }
+    
+    table {
+        min-width: 500px;
+        font-size: 0.9rem;
+    }
+    
+    /* Quiz */
+    .option-label {
+        padding: 12px;
+    }
+    
+    .quiz-btn {
+        width: 100%;
+    }
+    
+    /* Tooltips */
+    .tooltip .tooltip-text {
+        width: 150px;
+    }
+}
+
+/* Extra Small Devices (less than 480px) */
+@media screen and (max-width: 479px) {
+    h1 {
+        font-size: 1.5rem;
+    }
+    
+    h2 {
+        font-size: 1.3rem;
+    }
+    
+    .section, .quiz-question {
+        padding: 12px;
+    }
+    
+    .logo {
+        font-size: 1.2rem;
+    }
+    
+    .nav-container {
+        padding: 0 15px;
+    }
+    
+    /* Tables - Make responsive on small screens */
+    .table-responsive {
+        overflow-x: auto;
+    }
+    
+    table, thead, tbody, th, td, tr {
+        display: block;
+        width: 100%;
+    }
+    
+    thead tr {
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+    }
+    
+    tr {
+        margin-bottom: 15px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    }
+    
+    td {
+        position: relative;
+        padding: 0.75rem 0.75rem 0.75rem calc(35% + 10px);
+        text-align: left;
+        border: none;
+        border-bottom: 1px solid #eee;
+        font-size: 0.85rem;
+    }
+    
+    td:last-child {
+        border-bottom: none;
+    }
+    
+    /* Create labels for each cell */
+    td:before {
+        content: attr(data-label);
+        position: absolute;
+        left: 0.75rem;
+        width: 40%;
+        white-space: nowrap;
+        font-weight: bold;
+        color: #4CAF50;
+    }
+    
+    /* Reset alternating row colors */
+    tr:nth-child(even) {
+        background-color: transparent;
+    }
+    
+    td:nth-child(even) {
+        background-color: #f8f8f8;
+    }
+    
+    /* Timeline further adjustments */
+    .timeline .events::after {
+        width: 4px; /* Slightly thinner line */
+    }
+    
+    .event {
+        margin-bottom: 30px;
+    }
+    
+    .marker {
+        width: 16px;
+        height: 16px;
+        margin-left: 12px; /* Adjust centering for smaller marker */
+    }
+    
+    /* Quiz adjustments */
+    .quiz-container {
+        padding: 10px;
+    }
+    
+    .quiz-question {
+        margin-bottom: 15px;
+    }
+}
