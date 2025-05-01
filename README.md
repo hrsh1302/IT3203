@@ -28,9 +28,12 @@ project/
 ├── creator.html
 ├── quiz.html
 ├── references.html
-├── styles.css
-├── quiz.js
+├── css/
+|   └── styles.css
+├── js/
+|   └── quiz.js
 └── images/
+    └── ... (images)
 ```
 ## Pages Features
 - **Home Page**: Serves as a cover page with title and brief introduction that includes key terms section with definitions
